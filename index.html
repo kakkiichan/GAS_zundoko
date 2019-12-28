@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="top">
+    <script>
+   document.onkeypress = zundoko;
+    function zundoko() {
+  
+ var zundokoarea=document.getElementById("zundokoarea").value;
+ var word1 ="ズン ";
+  var word2 ="ドコ ";
+  var word3 ="キ・ヨ・シ！";
+  if(zundokoarea.indexOf(word3) ==-1){
+
+ if(zundokoarea.indexOf(word1+word1+word1+word1+word2) ==-1){
+ 
+ if(zundokoarea ==""){
+  alert("ズンドコ始まるよ!");
+  zundokoarea+= Math.random() < 0.5 ? word1 : word2;
+  document.getElementById("zundokoarea").value=zundokoarea;
+  }
+  else {
+  zundokoarea+= Math.random() < 0.5 ? word1 : word2;
+  document.getElementById("zundokoarea").value=zundokoarea;
+  
+  }
+ 
+}
+else{
+zundokoarea+="キ・ヨ・シ！" ;
+  document.getElementById("zundokoarea").value=zundokoarea;
+  alert("キ・ヨ・シ！");
+
+}
+
+}
+else{
+alert("ズンドコは終了しました!");
+}
+    }
+    </script>
+  </head>
+  <body>
+    
+    <textarea id="zundokoarea" rows="20" cols="51" disabled></textarea><br>
+    <input type="button" onClick="zundoko()" value="ズンドコする">
+  </body>
+</html>
+
+
